@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Yahtzee.MainPage">
+
+    <StackLayout BackgroundColor="SkyBlue" Padding="10">
+        <!-- Title Banner for the game -->
+        <Frame Padding="10">
+            <Label Text="YAHTZEE" HorizontalOptions="Center" FontSize="Header" TextColor="White" FontAttributes="Bold"/>
+        </Frame>
+        <Button x:Name="NewGame" Clicked="NewGame_Clicked" Text="New Game" BackgroundColor="Transparent" TextColor="DarkRed" FontSize="Medium" Padding="10"/>
+        
+        <!--  Upper Section - score board  -->
+        <!-- Grid for all scores and keep buttons-->
+       
+
+        <!-- Grid for all scores and keep buttons-->
+        <Grid BackgroundColor="Green" Margin="1" HeightRequest="600" WidthRequest="600" HorizontalOptions="Center" VerticalOptions="Center"
+              ColumnSpacing="1" RowSpacing="1" >
+
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <!--Lower scores buttons-->
+            <Button x:Name="btnOne" Clicked="btnOne_Clicked" BackgroundColor="Orange" Grid.Row="0" Grid.Column="0" Margin="4" Text="Keep" CornerRadius="5" HorizontalOptions="Center" VerticalOptions="Center" FontSize="Micro"/>
+            <Button x:Name="btnTwo" Clicked="btnTwo_Clicked" BackgroundColor="Orange" Grid.Row="1" Grid.Column="0" Margin="4" Text="Keep" CornerRadius="5" HorizontalOptions="Center" VerticalOptions="Center" FontSize="Micro"/>
+            <Button x:Name="btnThree" Clicked="btnThree_Clicked" BackgroundColor="Orange" Grid.Row="2" Grid.Column="0" Margin="4" Text="Keep" CornerRadius="5" HorizontalOptions="Center" VerticalOptions="Center" FontSize="Micro"/>
+            <Button x:Name="btnFour" Clicked="btnFour_Clicked" BackgroundColor="Orange" Grid.Row="3" Grid.Column="0" Margin="4" Text="Keep" CornerRadius="5" HorizontalOptions="Center" VerticalOptions="Center" FontSize="Micro"/>
+            <Button x:Name="btnFive" Clicked="btnFive_Clicked" BackgroundColor="Orange" Grid.Row="4" Grid.Column="0" Margin="4" Text="Keep" CornerRadius="5" HorizontalOptions="Center" VerticalOptions="Center" FontSize="Micro"/>
+            <Button x:Name="btnSix" Clicked="btnSix_Clicked" BackgroundColor="Orange" Grid.Row="5" Grid.Column="0" Margin="4" Text="Keep" CornerRadius="5" HorizontalOptions="Center" VerticalOptions="Center" FontSize="Micro"/>
+
+            <BoxView BackgroundColor="White" Grid.Row="0" Grid.Column="1" Margin="5" CornerRadius="3"/>
+            <Label x:Name="oneValue" Text="0" Grid.Row="0" Grid.Column="1" Margin="5" HorizontalOptions="Center" VerticalOptions="Center" FontSize="Medium" TextColor="Black"/>
+
+            <BoxView BackgroundColor="White" Grid.Row="1" Grid.Column="1" Margin="5" CornerRadius="3"/>
+            <Label x:Name="twoValue" Text="0" Grid.Row="1" Grid.Column="1" Margin="5" HorizontalOptions="Center" VerticalOptions="Center" FontSize="Medium" TextColor="Black"/>
+
+            <BoxView BackgroundColor="White" Grid.Row="2" Grid.Column="1" Margin="5" CornerRadius="3"/>
+            <Label x:Name="threeValue" Text="0" Grid.Row="2" Grid.Column="1" Margin="5" HorizontalOptions="Center" VerticalOptions="Center" FontSize="Medium" TextColor="Black"/>
+
+            <BoxView BackgroundColor="White" Grid.Row="3" Grid.Column="1" Margin="5" CornerRadius="3"/>
+            <Label x:Name="fourValue" Text="0" Grid.Row="3" Grid.Column="1" Margin="5" HorizontalOptions="Center" VerticalOptions="Center" FontSize="Medium" TextColor="Black"/>
+
+            <BoxView BackgroundColor="White" Grid.Row="4" Grid.Column="1" Margin="5" CornerRadius="3"/>
+            <Label x:Name="fiveValue" Text="0" Grid.Row="4" Grid.Column="1" Margin="5" HorizontalOptions="Center" VerticalOptions="Center" FontSize="Medium" TextColor="Black"/>
+
+            <BoxView BackgroundColor="White" Grid.Row="5" Grid.Column="1" Margin="5" CornerRadius="3"/>
+            <Label x:Name="sixValue" Text="0" Grid.Row="5" Grid.Column="1" Margin="5" HorizontalOptions="Center" VerticalOptions="Center" FontSize="Medium" TextColor="Black"/>
+
+            <Label BackgroundColor="White" Grid.Row="0" Grid.Column="2" Margin="3" Text="One" Padding="4" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="Black"/>
+            <Label BackgroundColor="White" Grid.Row="1" Grid.Column="2" Margin="3" Text="Two" Padding="4" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="Black"/>
+            <Label BackgroundColor="White" Grid.Row="2" Grid.Column="2" Margin="3" Text="Three" Padding="4" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="Black"/>
+            <Label BackgroundColor="White" Grid.Row="3" Grid.Column="2" Margin="3" Text="Four" Padding="4" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="Black"/>
+            <Label BackgroundColor="White" Grid.Row="4" Grid.Column="2" Margin="3" Text="Five" Padding="4" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="Black"/>
+            <Label BackgroundColor="White" Grid.Row="5" Grid.Column="2" Margin="3" Text="Six" Padding="4" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="Black"/>
+            <Label BackgroundColor="White" Grid.Row="6" Grid.Column="0" Margin="2,1,2,5" Text="Section Bonus: +35" Padding="5" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="Black"/>
+            <Label x:Name="userBonus" BackgroundColor="White" Grid.Row="6" Grid.Column="1" Margin="1,1,1,5" Text="Get total of 63: 0" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Padding="5" TextColor="Black"/>
+
+            <!--Upper scores buttons-->
+            <Button x:Name="btnThreeKind" Clicked="btnThreeKind_Clicked" BackgroundColor="Orange" Grid.Row="0" Grid.Column="3" Margin="4" Text="Keep" CornerRadius="5" HorizontalOptions="Center" VerticalOptions="Center" FontSize="Micro"/>
+            <Button x:Name="btnFourKind" Clicked="btnFourKind_Clicked" BackgroundColor="Orange" Grid.Row="1" Grid.Column="3" Margin="4" Text="Keep" CornerRadius="5" HorizontalOptions="Center" VerticalOptions="Center" FontSize="Micro"/>
+            <Button x:Name="btnHouse" Clicked="btnHouse_Clicked" BackgroundColor="Orange" Grid.Row="2" Grid.Column="3" Margin="4" Text="Keep" CornerRadius="5" HorizontalOptions="Center" VerticalOptions="Center" FontSize="Micro"/>
+            <Button x:Name="btnSmallStraight" Clicked="btnSmallStraight_Clicked" BackgroundColor="Orange" Grid.Row="3" Grid.Column="3" Margin="4" Text="Keep" CornerRadius="5" HorizontalOptions="Center" VerticalOptions="Center" FontSize="Micro"/>
+            <Button x:Name="btnLargeStraight" Clicked="btnLargeStraight_Clicked" BackgroundColor="Orange" Grid.Row="4" Grid.Column="3" Margin="4" Text="Keep" CornerRadius="5" HorizontalOptions="Center" VerticalOptions="Center" FontSize="Micro"/>
+            <Button x:Name="btnYahtzee" Clicked="btnYahtzee_Clicked" BackgroundColor="Orange" Grid.Row="5" Grid.Column="3" Margin="4" Text="Keep" CornerRadius="5" HorizontalOptions="Center" VerticalOptions="Center" FontSize="Micro"/>
+            <Button x:Name="btnChance"  Clicked="btnChance_Clicked" BackgroundColor="Orange" Grid.Row="6" Grid.Column="3" Margin="4" Text="Keep" CornerRadius="5" HorizontalOptions="Center" VerticalOptions="Center" FontSize="Micro"/>
+
+            <BoxView BackgroundColor="White" Grid.Row="0" Grid.Column="4" Margin="5" CornerRadius="5"/>
+            <Label x:Name="threeKindValue" Text="0" Grid.Row="0" Grid.Column="4" Margin="5" HorizontalOptions="Center" VerticalOptions="Center" FontSize="Medium" TextColor="Black"/>
+
+            <BoxView BackgroundColor="White" Grid.Row="1" Grid.Column="4" Margin="5" CornerRadius="5"/>
+            <Label x:Name="fourKindValue" Text="0" Grid.Row="1" Grid.Column="4" Margin="5" HorizontalOptions="Center" VerticalOptions="Center" FontSize="Medium" TextColor="Black"/>
+
+            <BoxView BackgroundColor="White" Grid.Row="2" Grid.Column="4" Margin="5" CornerRadius="5"/>
+            <Label x:Name="houseValue" Text="0" Grid.Row="2" Grid.Column="4" Margin="5" HorizontalOptions="Center" VerticalOptions="Center" FontSize="Medium" TextColor="Black"/>
+
+            <BoxView BackgroundColor="White" Grid.Row="3" Grid.Column="4" Margin="5" CornerRadius="5"/>
+            <Label x:Name="smallStraightValue" Text="0" Grid.Row="3" Grid.Column="4" Margin="5" HorizontalOptions="Center" VerticalOptions="Center" FontSize="Medium" TextColor="Black"/>
+
+            <BoxView BackgroundColor="White" Grid.Row="4" Grid.Column="4" Margin="5" CornerRadius="5"/>
+            <Label x:Name="largeStraightValue" Text="0" Grid.Row="4" Grid.Column="4" Margin="5" HorizontalOptions="Center" VerticalOptions="Center" FontSize="Medium" TextColor="Black"/>
+
+            <BoxView BackgroundColor="White" Grid.Row="5" Grid.Column="4" Margin="5" CornerRadius="5"/>
+            <Label x:Name="yahtzeeValue" Text="0" Grid.Row="5" Grid.Column="4" Margin="5" HorizontalOptions="Center" VerticalOptions="Center" FontSize="Medium" TextColor="Black"/>
+
+            <BoxView BackgroundColor="White" Grid.Row="6" Grid.Column="4" Margin="5" CornerRadius="5"/>
+            <Label x:Name="chanceValue" Text="0" Grid.Row="6" Grid.Column="4" Margin="5" HorizontalOptions="Center" VerticalOptions="Center" FontSize="Medium" TextColor="Black"/>
+
+            <Label BackgroundColor="White" Grid.Row="0" Grid.Column="5" Margin="3" Text="Three of a kind" Padding="4" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="Black"/>
+            <Label BackgroundColor="White"  Grid.Row="1" Grid.Column="5" Margin="3" Text="Four of a kind" Padding="4" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="Black"/>
+            <Label BackgroundColor="White" Grid.Row="2" Grid.Column="5" Margin="3" Text="Full House" Padding="4" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="Black"/>
+            <Label BackgroundColor="White" Grid.Row="3" Grid.Column="5" Margin="3" Text="Small straight" Padding="4" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="Black"/>
+            <Label BackgroundColor="White" Grid.Row="4" Grid.Column="5" Margin="3" Text="Large Straight" Padding="4" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="Black"/>
+            <Label BackgroundColor="White" Grid.Row="5" Grid.Column="5" Margin="3" Text="Yahtzee" Padding="4" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="Black"/>
+            <Label BackgroundColor="White" Grid.Row="6" Grid.Column="5" Margin="3" Text="Chance" Padding="4" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="Black"/>
+
+        </Grid>
+        
+        <!-- Total upper scores - roll buttons - Total lower scores-->
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="1">
+            <Label x:Name="lblUpperTotal" Text="Upper Total: 0" FontSize="Small" TextColor="White"/>
+            <Button BackgroundColor="Orange" x:Name="Roll" Text="ROLL DICE" Margin="25,0,25,0" CornerRadius="5" Clicked="BtnDiceRollClicked" TextColor="Black"/>
+            <Label x:Name="lblLowerTotal" Text="Lower Total: 0" FontSize="Small" TextColor="White"/>
+        </StackLayout>
+        
+        <!-- Grid for dice and hold buttons-->
+        <Grid Margin="1" HeightRequest="150" WidthRequest="600" HorizontalOptions="Center" VerticalOptions="Center"
+              ColumnSpacing="1" RowSpacing="1">
+
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            
+            <!-- dice buttons-->
+            <BoxView BackgroundColor="White" Grid.Row="0" Grid.Column="0" Margin="5" CornerRadius="5"/>
+            <Label x:Name="dice1" Text="0" Grid.Row="0" Grid.Column="0" Margin="5" HorizontalOptions="Center" VerticalOptions="Center" FontSize="Medium" TextColor="Black"/>
+
+            <BoxView BackgroundColor="White" Grid.Row="0" Grid.Column="1" Margin="5" CornerRadius="5"/>
+            <Label x:Name="dice2" Text="0" Grid.Row="0" Grid.Column="1" Margin="5" HorizontalOptions="Center" VerticalOptions="Center" FontSize="Medium" TextColor="Black"/>
+
+            <BoxView BackgroundColor="White" Grid.Row="0" Grid.Column="2" Margin="5" CornerRadius="5"/>
+            <Label x:Name="dice3" Text="0" Grid.Row="0" Grid.Column="2" Margin="5" HorizontalOptions="Center" VerticalOptions="Center" FontSize="Medium" TextColor="Black"/>
+
+            <BoxView BackgroundColor="White" Grid.Row="0" Grid.Column="3" Margin="5" CornerRadius="5"/>
+            <Label x:Name="dice4" Text="0" Grid.Row="0" Grid.Column="3" Margin="5" HorizontalOptions="Center" VerticalOptions="Center" FontSize="Medium" TextColor="Black"/>
+
+            <BoxView BackgroundColor="White" Grid.Row="0" Grid.Column="4" Margin="5" CornerRadius="5"/>
+            <Label x:Name="dice5" Text="0" Grid.Row="0" Grid.Column="4" Margin="5" HorizontalOptions="Center" VerticalOptions="Center" FontSize="Medium" TextColor="Black"/>
+            
+            <!-- hold dice buttons-->
+            <Button x:Name="btnHold1" Clicked="btnHold1_Clicked" BackgroundColor="DimGray" Grid.Row="1" Grid.Column="0" Margin="5" Text="Hold" CornerRadius="5"/>
+            <Button x:Name="btnHold2" Clicked="btnHold2_Clicked" BackgroundColor="DimGray" Grid.Row="1" Grid.Column="1" Margin="5" Text="Hold" CornerRadius="5"/>
+            <Button x:Name="btnHold3" Clicked="btnHold3_Clicked" BackgroundColor="DimGray" Grid.Row="1" Grid.Column="2" Margin="5" Text="Hold" CornerRadius="5"/>
+            <Button x:Name="btnHold4" Clicked="btnHold4_Clicked" BackgroundColor="DimGray" Grid.Row="1" Grid.Column="3" Margin="5" Text="Hold" CornerRadius="5"/>
+            <Button x:Name="btnHold5" Clicked="btnHold5_Clicked" BackgroundColor="DimGray" Grid.Row="1" Grid.Column="4" Margin="5" Text="Hold" CornerRadius="5"/>
+
+        </Grid>
+
+
+        
+        <!-- total scores-->
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+            <Label x:Name="userTotal" Text="Total: 0" FontSize="Title" Margin="0,0,0,4"  TextColor="White"/>
+        </StackLayout>
+
+    </StackLayout>
+    
+        
+
+</ContentPage>

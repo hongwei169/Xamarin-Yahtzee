@@ -1,0 +1,15 @@
+C:\Users\LENOVO\OneDrive - GMIT\Year 2\mobile app\Yahtzee\Yahtzee\Yahtzee\obj\Debug\netstandard2.0\Yahtzee.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\LENOVO\OneDrive - GMIT\Year 2\mobile app\Yahtzee\Yahtzee\Yahtzee\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\LENOVO\OneDrive - GMIT\Year 2\mobile app\Yahtzee\Yahtzee\Yahtzee\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+C:\Users\LENOVO\OneDrive - GMIT\Year 2\mobile app\Yahtzee\Yahtzee\Yahtzee\obj\Debug\netstandard2.0\Yahtzee.AssemblyInfoInputs.cache
+C:\Users\LENOVO\OneDrive - GMIT\Year 2\mobile app\Yahtzee\Yahtzee\Yahtzee\obj\Debug\netstandard2.0\Yahtzee.AssemblyInfo.cs
+C:\Users\LENOVO\OneDrive - GMIT\Year 2\mobile app\Yahtzee\Yahtzee\Yahtzee\obj\Debug\netstandard2.0\Yahtzee.csproj.CoreCompileInputs.cache
+C:\Users\LENOVO\OneDrive - GMIT\Year 2\mobile app\Yahtzee\Yahtzee\Yahtzee\obj\Debug\netstandard2.0\Yahtzee.dll
+C:\Users\LENOVO\OneDrive - GMIT\Year 2\mobile app\Yahtzee\Yahtzee\Yahtzee\obj\Debug\netstandard2.0\ref\Yahtzee.dll
+C:\Users\LENOVO\OneDrive - GMIT\Year 2\mobile app\Yahtzee\Yahtzee\Yahtzee\obj\Debug\netstandard2.0\Yahtzee.pdb
+C:\Users\LENOVO\OneDrive - GMIT\Year 2\mobile app\Yahtzee\Yahtzee\Yahtzee\bin\Debug\netstandard2.0\Yahtzee.deps.json
+C:\Users\LENOVO\OneDrive - GMIT\Year 2\mobile app\Yahtzee\Yahtzee\Yahtzee\bin\Debug\netstandard2.0\Yahtzee.dll
+C:\Users\LENOVO\OneDrive - GMIT\Year 2\mobile app\Yahtzee\Yahtzee\Yahtzee\bin\Debug\netstandard2.0\ref\Yahtzee.dll
+C:\Users\LENOVO\OneDrive - GMIT\Year 2\mobile app\Yahtzee\Yahtzee\Yahtzee\bin\Debug\netstandard2.0\Yahtzee.pdb
+C:\Users\LENOVO\OneDrive - GMIT\Year 2\mobile app\Yahtzee\Yahtzee\Yahtzee\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\LENOVO\OneDrive - GMIT\Year 2\mobile app\Yahtzee\Yahtzee\Yahtzee\obj\Debug\netstandard2.0\Yahtzee.csproj.AssemblyReference.cache
